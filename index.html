@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>РАМ-Т.В. — Негосударственная экспертиза</title>
+<style>@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");</style>
+<link rel="stylesheet" href="site/colors_and_type.css">
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  html,body{margin:0;background:#fff;font-family:Inter,sans-serif;-webkit-font-smoothing:antialiased;color:#141414;}
+  a{text-decoration:none;}
+  button{font-family:Inter,sans-serif;}
+  ::selection{background:#141414;color:#fff;}
+  :root{ --rt-gap:116px; }
+  @keyframes ramFade{from{opacity:0}to{opacity:1}}
+  @keyframes ramRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+  [data-phlabels="off"] .rt-ph-label{display:none !important;}
+  [data-utilbar="off"] .rt-utilbar{display:none !important;}
+  ::-webkit-scrollbar{width:11px;height:11px;}
+  ::-webkit-scrollbar-thumb{background:#d8dde0;border-radius:8px;border:3px solid #fff;}
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#141414">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#141414"/>
+    <rect x="495" y="300" width="120" height="120" rx="28" fill="#ffffff"/>
+    <path d="M527 360 h40 l22 22 v38 h-62 z M567 360 v22 h22" fill="none" stroke="#141414" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M540 388 l10 10 18 -18" fill="none" stroke="#141414" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+    <text x="640" y="400" font-family="Inter, sans-serif" font-size="76" font-weight="600" fill="#ffffff" letter-spacing="3">РАМ-Т.В.</text>
+    <text x="497" y="470" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#9aa0a8" letter-spacing="6">НЕГОСУДАРСТВЕННАЯ ЭКСПЕРТИЗА</text>
+  </svg>
+</template>
+<div id="root"></div>
+<script type="text/babel" src="site/tweaks-panel.jsx"></script>
+<script type="text/babel" src="site/components.jsx"></script>
+<script type="text/babel" src="site/data.jsx"></script>
+<script type="text/babel" src="site/ServicesData.jsx"></script>
+<script type="text/babel" src="site/Header.jsx"></script>
+<script type="text/babel" src="site/Sections1.jsx"></script>
+<script type="text/babel" src="site/Sections2.jsx"></script>
+<script type="text/babel" src="site/Sections3.jsx"></script>
+<script type="text/babel" src="site/Sections4.jsx"></script>
+<script type="text/babel" src="site/Footer.jsx"></script>
+<script type="text/babel" src="site/CalcModal.jsx"></script>
+<script type="text/babel" src="site/ServiceModal.jsx"></script>
+<script type="text/babel" src="site/page_home.jsx"></script>
+</body>
+</html>

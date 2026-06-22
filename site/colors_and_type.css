@@ -1,0 +1,277 @@
+/* ============================================================
+   MERIDIAN LINE — Prototype Design System
+   colors_and_type.css
+
+   A monochrome, low-fidelity "wireframe prototype" kit used to
+   pitch corporate logistics websites. Grayscale surfaces, blue-grey
+   strokes, black pill buttons, Inter throughout.
+
+   Load Inter (Google Fonts) before this file:
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   ============================================================ */
+
+:root {
+  /* ---------- Base palette ---------- */
+  --ml-white:        #ffffff;
+  --ml-black:        #000000;
+  --ml-ink:          #060606;   /* near-black body text */
+  --ml-ink-900:      #141414;   /* footer bg, strong headings */
+  --ml-ink-800:      #1b1b1b;   /* dark surfaces / strong text */
+  --ml-ink-700:      #2a2a2a;
+
+  /* Wireframe / placeholder grays (the defining motif) */
+  --ml-wire:         #585858;   /* image + media placeholder fill (most used color) */
+  --ml-wire-2:       #c4c4c4;   /* logo / faint marks */
+
+  /* Surfaces */
+  --ml-surface-1:    #f4f5f6;   /* primary card / panel */
+  --ml-surface-2:    #f0f0f0;   /* alternate form panel */
+  --ml-surface-3:    #fafbfc;   /* hover lift */
+
+  /* Text */
+  --ml-text:         #060606;   /* primary */
+  --ml-text-2:       #616161;   /* secondary body */
+  --ml-text-slate:   #657981;   /* slate body inside cards */
+  --ml-text-slate-2: #576b7e;   /* deeper slate */
+  --ml-text-muted:   #92a4b7;   /* muted blue-grey captions */
+  --ml-text-nav:     #79828d;   /* nav + breadcrumb */
+  --ml-text-faint:   #a6b2b7;   /* input placeholders */
+
+  /* Blue-grey strokes (only chroma in the system) */
+  --ml-border:       #d0e0e5;   /* default hairline */
+  --ml-border-2:     #c3d2e0;   /* card stroke */
+  --ml-border-input: #c9d1d3;   /* input outline */
+  --ml-border-badge: #c1d1d7;   /* date / tag chips */
+
+  /* Steppe (requisites block) — substitute below */
+  --ml-steppe-head:  #262a31;
+  --ml-steppe-label: #9da6b7;
+
+  /* ---------- Radii ---------- */
+  --ml-r-pill:    50px;  /* buttons, inputs */
+  --ml-r-card-lg: 30px;  /* hero panel, large sections */
+  --ml-r-card:    20px;  /* standard cards */
+  --ml-r-sm:      10px;  /* small media tiles */
+  --ml-r-badge:    5px;  /* chips / date tags */
+
+  /* ---------- Spacing (8pt base, page gutter 160) ---------- */
+  --ml-gutter:   160px;  /* page side margin @1920 */
+  --ml-maxw:    1600px;  /* content column width */
+  --ml-s-1:  8px;
+  --ml-s-2: 16px;
+  --ml-s-3: 24px;
+  --ml-s-4: 32px;
+  --ml-s-5: 40px;
+  --ml-s-6: 60px;
+  --ml-s-7: 80px;
+
+  /* ---------- Shadow (used sparingly — wireframes are flat) ---------- */
+  --ml-shadow-card: 0 1px 2px rgba(20,20,20,0.04);
+  --ml-shadow-hover: 0 8px 24px rgba(29,36,49,0.08);
+
+  /* ---------- Type families ---------- */
+  --ml-font: "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
+  /* Steppe (Cyrillic) & PF BeauSans Pro are not on Google Fonts —
+     substituted with Inter. See README "Typography / substitutions". */
+  --ml-font-steppe: "Inter", sans-serif;
+}
+
+/* ============================================================
+   BASE TYPE STYLES
+   Inter, with a tight scale. Headings use Medium (500); body Regular.
+   ============================================================ */
+
+.ml-display {            /* hero slogan */
+  font-family: var(--ml-font);
+  font-weight: 500;
+  font-size: 52px;
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+  color: var(--ml-black);
+}
+
+.ml-h1 {                 /* big section / form heading */
+  font-family: var(--ml-font);
+  font-weight: 500;
+  font-size: 46px;
+  line-height: 52px;
+  letter-spacing: -0.01em;
+  color: var(--ml-black);
+}
+
+.ml-h2 {                 /* section heading ("Наши преимущества") */
+  font-family: var(--ml-font);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.15;
+  color: var(--ml-ink-900);
+}
+
+.ml-h3 {                 /* sub-section */
+  font-family: var(--ml-font);
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--ml-ink-900);
+}
+
+.ml-h4 {                 /* card title */
+  font-family: var(--ml-font);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--ml-ink-900);
+}
+
+.ml-body-lg {            /* lead paragraph */
+  font-family: var(--ml-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--ml-text-slate);
+}
+
+.ml-body {               /* default body */
+  font-family: var(--ml-font);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  color: var(--ml-text-2);
+}
+
+.ml-body-hero {          /* hero supporting copy (light weight) */
+  font-family: var(--ml-font);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--ml-black);
+}
+
+.ml-small {              /* captions, meta */
+  font-family: var(--ml-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--ml-text-muted);
+}
+
+.ml-nav {                /* nav links + breadcrumbs */
+  font-family: var(--ml-font);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--ml-text-nav);
+}
+
+.ml-stat-num {           /* big statistics */
+  font-family: var(--ml-font);
+  font-weight: 500;
+  font-size: 46px;
+  line-height: 1.0;
+  color: var(--ml-black);
+}
+
+/* ============================================================
+   ELEMENTS
+   ============================================================ */
+
+/* Primary pill button (black) */
+.ml-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 40px;
+  border-radius: var(--ml-r-pill);
+  background: var(--ml-black);
+  color: var(--ml-white);
+  font-family: var(--ml-font);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+  border: none;
+  cursor: pointer;
+  transition: background .18s ease, transform .12s ease;
+}
+.ml-btn:hover { background: var(--ml-ink-700); }
+.ml-btn:active { transform: scale(.98); }
+
+/* Small pill button ("Подробнее") */
+.ml-btn-sm {
+  padding: 10px 22px;
+  font-size: 14px;
+}
+
+/* Ghost / outline pill (e.g. "Смотреть все") */
+.ml-btn-ghost {
+  background: transparent;
+  color: var(--ml-ink-900);
+  border: 1px solid var(--ml-border-2);
+}
+.ml-btn-ghost:hover { background: var(--ml-surface-1); }
+
+/* Chip / date tag */
+.ml-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--ml-r-badge);
+  border: 1px solid var(--ml-border-badge);
+  font-family: var(--ml-font);
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--ml-text-slate-2);
+  background: var(--ml-white);
+}
+
+/* Card */
+.ml-card {
+  background: var(--ml-surface-1);
+  border-radius: var(--ml-r-card);
+  border: 1px solid var(--ml-border);
+  padding: 28px;
+}
+
+/* Pill input */
+.ml-input {
+  width: 100%;
+  height: 61px;
+  padding: 0 22px;
+  border-radius: var(--ml-r-pill);
+  border: 1px solid var(--ml-border-input);
+  background: var(--ml-white);
+  font-family: var(--ml-font);
+  font-size: 14px;
+  color: var(--ml-text);
+}
+.ml-input::placeholder { color: var(--ml-text-faint); }
+.ml-input:focus { outline: none; border-color: var(--ml-text-nav); }
+
+/* Wireframe media placeholder (the signature motif) — gray box with X */
+.ml-placeholder {
+  position: relative;
+  background: var(--ml-surface-1);
+  border: 1px solid var(--ml-border);
+  border-radius: var(--ml-r-sm);
+  overflow: hidden;
+}
+.ml-placeholder::before,
+.ml-placeholder::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top right,
+      transparent calc(50% - 0.7px),
+      var(--ml-border-2) calc(50% - 0.7px),
+      var(--ml-border-2) calc(50% + 0.7px),
+      transparent calc(50% + 0.7px));
+}
+.ml-placeholder::after {
+  background:
+    linear-gradient(to bottom right,
+      transparent calc(50% - 0.7px),
+      var(--ml-border-2) calc(50% - 0.7px),
+      var(--ml-border-2) calc(50% + 0.7px),
+      transparent calc(50% + 0.7px));
+}
