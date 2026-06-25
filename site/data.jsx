@@ -3,7 +3,7 @@
 const SERVICE_GROUPS = [
   {
     key: "proj",
-    title: "Проекты и изыскания",
+    title: "Проектная документация и изыскания",
     items: [
       { n: "Экспертиза проектной документации", slug: "ekspertiza-pd" },
       { n: "Экспертиза результатов инженерных изысканий", slug: "ekspertiza-rii" },
@@ -18,7 +18,7 @@ const SERVICE_GROUPS = [
   },
   {
     key: "smeta",
-    title: "Сметы",
+    title: "Сметная документация",
     items: [
       { n: "Экспертиза сметной документации", slug: "ekspertiza-smet" },
       { n: "Ведомости объёмов работ", slug: "vor" },
